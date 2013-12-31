@@ -32,12 +32,17 @@ print and PDF format. See http://t3x.org/s9book/
 
 S9fES supports the following SRFI's:
 
-- SRFI-0: feature-based conditional expansion (subset)
-- SRFI-2: `and-let*` (subset)
-- SRFI-22: running Scheme scripts on Unix
-- SRFI-23: error reporting mechanism
-- SRFI-30: nested multi-line comments
-- `vector-copy` and `vector-append` from SRFI-43
+- [SRFI-0](http://srfi.schemers.org/srfi-0/srfi-0.html): feature-based
+  conditional expansion (subset)
+- [SRFI-2](http://srfi.schemers.org/srfi-2/srfi-2.html): `and-let*` (subset)
+- [SRFI-22](http://srfi.schemers.org/srfi-22/srfi-22.html): running Scheme
+  scripts on Unix
+- [SRFI-23](http://srfi.schemers.org/srfi-23/srfi-23.html): error reporting
+  mechanism
+- [SRFI-30](http://srfi.schemers.org/srfi-30/srfi-30.html): nested multi-line
+  comments
+- `vector-copy` and `vector-append` from
+  [SRFI-43](http://srfi.schemers.org/srfi-43/srfi-43.html)
 
 ### Note
 
@@ -231,7 +236,7 @@ reports, suggestions, hardware, access to hardware, etc:
 
 Bakul Shah, Barak Pearlmutter, Blake McBride, Bsamograd (reddit), Dig1
 (reddit), Dirk Lutzebaeck, Doug Currie, Mario Deilmann, Masaru KIMURA, Torsten
-Leibold, and the Super Dimension Fortress (SDF.ORG).
+Leibold, and the Super Dimension Fortress (sdf.org).
 
 
 ## Contact
