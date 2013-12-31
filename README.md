@@ -1,8 +1,8 @@
 # Scheme 9 from Empty Space
 
-## _A Portable Scheme Interpreter with a Unix Interface_
+### _A Portable Scheme Interpreter with a Unix Interface_
 
-### By Nils M Holm, 2007-2013
+#### By Nils M Holm, 2007-2013
 
 
 ## Introduction
