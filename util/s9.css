@@ -1,0 +1,55 @@
+BODY { background: #e8e0c0;
+       color: #000000; }
+
+A:link {
+        color: #0000ff;
+        text-decoration: none; }
+
+A:visited {
+        color: #006060;
+        text-decoration: none; }
+
+A:hover, A:focus {
+        background: #0000ff; color: #ffffff; }
+
+IMG { float: right; 
+      margin-left: 0.5cm;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0.2cm; }
+
+HR { border: 0; border-top: 1px solid #a00000; clear: both; }
+
+PRE.man { }
+
+PRE.man B { color: #800000; }
+PRE.man I { color: #800000; }
+PRE.man U { color: #800000; }
+
+PRE.scheme { background: #f6f0ea;
+             line-height: 130%;
+             padding: 0.5em;
+             border: 1px solid #808080; }
+
+PRE.scheme SPAN.o { color: #600000; } /* comment */
+PRE.scheme SPAN.p { color: #707070; } /* parenthesis */
+PRE.scheme SPAN.s { color: #000000; } /* symbol */
+PRE.scheme SPAN.c { color: #0060c0; } /* constant */
+PRE.scheme SPAN.r { color: #6000c0; } /* r4rs procedure */
+PRE.scheme SPAN.y { color: #6000c0; } /* r4rs syntax */
+PRE.scheme SPAN.x { color: #c06000; } /* s9fes procedure */
+PRE.scheme SPAN.z { color: #c06000; } /* s9fes syntax */
+PRE.scheme SPAN.m { color: #000080; } /* normal form */
+
+PRE.ccode { background: #f6f0ea;
+            line-height: 130%;
+            padding: 0.5em;
+            border: 1px solid #808080; }
+
+PRE.ccode SPAN.co { color: #600000; } /* comment */
+PRE.ccode SPAN.cp { color: #505050; } /* punctuation */
+PRE.ccode SPAN.cs { color: #000000; } /* symbol */
+PRE.ccode SPAN.cc { color: #0060c0; } /* constant */
+PRE.ccode SPAN.cr { color: #6000c0; } /* reserved word */
+PRE.ccode SPAN.cl { color: #6000c0; } /* stdlib symbol */
+PRE.ccode SPAN.cx { color: #c06000; } /* extension */
