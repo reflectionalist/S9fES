@@ -1422,13 +1422,12 @@ cell flat_copy(cell n, cell *lastp) {
 
 	if (n == NIL) {
 		if (lastp != NULL)
-			lastp[0] = NIL;
+			*lastp = NIL;
 		return NIL;
 	}
 	m = cons3(NIL, NIL, Tag[n]);
 	save(m);
 	a = m;
-	last = m;
 	while (n != NIL) {
 		car(a) = car(n);
 		last = a;
@@ -1441,7 +1440,7 @@ cell flat_copy(cell n, cell *lastp) {
 	}
 	unsave(1);
 	if (lastp != NULL)
-		lastp[0] = last;
+		*lastp = last;
 	return m;
 }
 
