@@ -1553,8 +1553,6 @@ cell lookup(cell v, cell env, int req) {
 		n = try_hash(v, e);
 		if (n != NIL)
 			return n;
-		if (e != NIL)
-			e = cdr(e);
 		while (e != NIL) {
 			if (v == caar(e))
 				return car(e);
