@@ -210,10 +210,9 @@ default.)
 
 ## Scheme Editor
 
-The Scheme 9 Editor is started with the <kbd>s9e</kbd> command (<kbd>,l
-s9e</kbd> first). The help page is loaded by pressing <kbd>Ctrl</kbd>
-+ <kbd>l</kbd> and then <kbd>h</kbd>. See the **Usage** section at the end of
-the help file for instructions.
+The Scheme 9 Editor is started with the <kbd>s9e</kbd> command. The help page
+is loaded by pressing <kbd>Ctrl</kbd> + <kbd>l</kbd> and then <kbd>h</kbd>.
+See the **Usage** section at the end of the help file for instructions.
 
 The most interesting feature of S9E is probably its interaction buffer. Type
 <kbd>Ctrl</kbd> + <kbd>z</kbd> <kbd>s</kbd> to open an interaction buffer,
