@@ -1493,7 +1493,6 @@ void rehash(cell e) {
 	p = cdr(e);
 	while (p != NIL) {
 		s = symbol_name(caar(p));
-		h = 0;
 		hash(s, h);
 		new = cons(car(p), v[h%k]);
 		v = vector(car(e));
