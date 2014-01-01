@@ -2,4 +2,5 @@
 *.gz
 *.image
 s9
+util/libtest.scm
 
