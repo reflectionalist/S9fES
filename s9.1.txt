@@ -3,61 +3,61 @@ S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
 
-NAME
-          s9 - Scheme Interpreter
+[1mNAME[0m
+          [1ms9 [22m- Scheme Interpreter
 
-USAGE
-          s9 [-h?] [-i name] [-gnqv] [-m size[m]] [-f prog [args]]
-             [-l prog] [-t count] [-d image] [-- [args]]
+[1mUSAGE[0m
+          [1ms9 [-h?] [-i name] [-gnqv] [-m size[m]] [-f prog [args]][0m
+             [1m[-l prog] [-t count] [-d image] [-- [args]][0m
 
-DESCRIPTION
-          Scheme  9 from Empty Space is an interpreter for R4RS Scheme
+[1mDESCRIPTION[0m
+          [1mScheme  9 from Empty Space [22mis an interpreter for R4RS Scheme
           with some additional procedures for accessing  typical  Unix
           system  calls  and  Unix  and  Curses  library functions (if
-          compiled-in). The s9 command starts the interpreter.
+          compiled-in). The [1ms9 [22mcommand starts the interpreter.
 
-OPTIONS
-          -h or -?
+[1mOPTIONS[0m
+          [1m-h or -?[0m
               Display a brief summary of options.
-          -i name
-              Load alternative image file `name.image'. When no  image
-              file can be found, try to load `name.scm'. The file will
-              be  searched  in  the  entire  S9FES_LIBRARY_PATH   (see
-              below).  When  this option is used, it must be the first
+          [1m-i name[0m
+              Load alternative image file `[4mname[24m.image'. When no  image
+              file can be found, try to load `[4mname[24m.scm'. The file will
+              be  searched  in  the  entire  [4mS9FES_LIBRARY_PATH[24m   (see
+              below).  When  this option is used, it [1mmust [22mbe the first
               one of the s9 command.
-              When `-' is specified as name, no  heap  image  will  be
+              When `-' is specified as [4mname[24m, no  heap  image  will  be
               loaded,  and  the  core  library  will  be read from the
               source file `s9.scm'.
-          -d file
-              Dump heap image to file and exit.
-          -f program [arguments]
-              Run program and exit (implies -q). When  there  are  any
-              arguments,  they  are  passed to the program, where they
-              can be extracted using the command-line procedure.
-          -g
-              Print GC summaries (-gg = more verbose).
-          -n
-              Do not load $HOME/.s9fes/rc file, if any.
-          -l program
-              Load program before entering the REPL or  processing  -f
+          [1m-d file[0m
+              Dump heap image to [4mfile[24m and exit.
+          [1m-f program [arguments][0m
+              Run [4mprogram[24m and exit (implies -q). When  there  are  any
+              [4marguments[24m,  they  are  passed to the [4mprogram[24m, where they
+              can be extracted using the [1mcommand-line [22mprocedure.
+          [1m-g[0m
+              Print GC summaries ([1m-gg [22m= more verbose).
+          [1m-n[0m
+              Do not load [4m$HOME/.s9fes/rc[24m file, if any.
+          [1m-l program[0m
+              Load [4mprogram[24m before entering the REPL or  processing  [1m-f[0m
               (may be repeated).
-          -m N[m]
-              Set  memory  limit to N kilo (or mega) nodes (-m 0 means
+          [1m-m N[m][0m
+              Set  memory  limit to [4mN[24m kilo (or mega) nodes ([1m-m 0 [22mmeans
               no limit; use with care!).
-          -q
+          [1m-q[0m
               Be quiet: skip banners and prompts, exit on errors.
-          -t count
-              Display count procedures at most in call traces.
-          -v
+          [1m-t count[0m
+              Display [4mcount[24m procedures at most in call traces.
+          [1m-v[0m
               Display version and exit.
-          -- [argument ...]
-              Arguments following -- are not interpreted by S9fES, but
-              passed  to  the command-line procedure instead (requires
-              the unix extension).
+          [1m-- [argument ...][0m
+              Arguments following [1m-- [22mare not interpreted by S9fES, but
+              passed  to  the [1mcommand-line [22mprocedure instead (requires
+              the [1munix [22mextension).
 
-ONLINE HELP
+[1mONLINE HELP[0m
           When the interpreter is running and the default  heap  image
-          is  loaded, just type (help) or ,h to invoke the online help
+          is  loaded, just type [1m(help) [22mor [1m,h [22mto invoke the online help
           system.  When the online help system is not loaded, you will
           have to run the following command first:
 
@@ -68,60 +68,60 @@ S9 Interpreter                  Page 1                           S9(1)
 S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
-          (load-from-library "help.scm")
+          [1m(load-from-library "help.scm")[0m
 
-META COMMANDS
+[1mMETA COMMANDS[0m
           In  order  to  facilitate  the invocation of frequently-used
-          top-level  procedures,  s9  provides  the  following   "meta
-          commands"  (they  work  only when entered directly at the s9
+          top-level  procedures,  [1ms9  [22mprovides  the  following   "meta
+          commands"  (they  work  only when entered directly at the [1ms9[0m
           prompt):
 
-              ,a text  =  (apropos "text")
-              ,h text  =  (help "text")
-              ,l file  =  (load-from-library "file")
-              ,q       =  (sys:exit)
+              [1m,a text  [22m=  (apropos "text")
+              [1m,h text  [22m=  (help "text")
+              [1m,l file  [22m=  (load-from-library "file")
+              [1m,q       [22m=  (sys:exit)
 
-          The arguments of ,a and ,h are optional.
+          The arguments of [1m,a [22mand [1m,h [22mare optional.
 
-ADDITIONS
+[1mADDITIONS[0m
           S9fES supports nestable block comments of the form
 
-              #| comment ... |#.
+              [1m#| [4m[22mcomment[24m [4m...[24m [1m|#[22m.
 
           Square brackets may be used in the places of parentheses:
 
-              (cond [(foo) (bar)]).
+              [1m(cond [(foo) (bar)])[22m.
 
           The same type of bracket must be used  on  both  ends  of  a
           list.
 
           These S9fES procedures are not in R4RS:
 
-          (argv integer)  ==>  string | #f
+          [1m(argv integer)  ==>  string | #f[0m
               Retrieve  the  value of the given command line argument.
-              Return #f, if there are less than  integer+1  arguments.
+              Return [1m#f[22m, if there are less than  [4minteger[24m+1  arguments.
               Arguments start at 0.
 
-          (bit-op integer1 integer2 integer3 ...)  ==>  integer | #f
-              Implement  a variety of bitwise operations. See the bit-
-              op help page for details.
+          [1m(bit-op integer1 integer2 integer3 ...)  ==>  integer | #f[0m
+              Implement  a variety of bitwise operations. See the [1mbit-[0m
+              [1mop [22mhelp page for details.
 
-          (delete-file string)  ==>  unspecific
-              Delete the file specified in the string argument. If the
+          [1m(delete-file string)  ==>  unspecific[0m
+              Delete the file specified in the [4mstring[24m argument. If the
               file  does  not  exist  or  cannot be deleted, report an
               error.
 
-          (dump-image string)  ==>  unspecific
-              Write a heap image to  the  file  given  in  the  string
+          [1m(dump-image string)  ==>  unspecific[0m
+              Write a heap image to  the  file  given  in  the  [4mstring[0m
               argument. If the file already exists, report an error.
 
-          (environ string)  ==>  string | #f
+          [1m(environ string)  ==>  string | #f[0m
               Retrieve  the  value  of the given environment variable.
-              Return #f, if the variable is undefined.
+              Return [1m#f[22m, if the variable is undefined.
 
-          (error string)         ==>  undefined
-          (error string object)  ==>  undefined
-              Print an error message of the form error: string: object
+          [1m(error string)         ==>  undefined[0m
+          [1m(error string object)  ==>  undefined[0m
+              Print an error message of the form [4merror:[24m [4mstring:[24m [4mobject[0m
               and terminate program execution.
 
 
@@ -134,63 +134,63 @@ S9 Interpreter                  Page 2                           S9(1)
 S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
-          (exponent real)  ==>  integer
+          [1m(exponent real)  ==>  integer[0m
               Extract the exponent part from a real number.
 
-          (file-exists? string)  ==>  boolean
-              Return  #t  if the file specified in the string argument
-              exists and otherwise #f.
+          [1m(file-exists? string)  ==>  boolean[0m
+              Return  [1m#t  [22mif the file specified in the [4mstring[24m argument
+              exists and otherwise [1m#f[22m.
 
-          (fold-left proc base list ...)  ==>  object
-              Combine the elements of the lists using  proc.   Combine
-              elements   left-associatively.   Base  is  the  leftmost
+          [1m(fold-left proc base list ...)  ==>  object[0m
+              Combine the elements of the [4mlist[24ms using  [4mproc[24m.   Combine
+              elements   left-associatively.   [4mBase[24m  is  the  leftmost
               element.
 
-          (fold-right proc base list ...)  ==>  object
-              Combine the elements of the lists using  proc.   Combine
-              elements  right-associatively.   Base  is  the rightmost
+          [1m(fold-right proc base list ...)  ==>  object[0m
+              Combine the elements of the [4mlist[24ms using  [4mproc[24m.   Combine
+              elements  right-associatively.   [4mBase[24m  is  the rightmost
               element.
 
-          (gensym)         ==>  symbol
-          (gensym symbol)  ==>  symbol
-          (gensym string)  ==>  symbol
-              Return a fresh symbol. When a string or symbol  argument
+          [1m(gensym)         ==>  symbol[0m
+          [1m(gensym symbol)  ==>  symbol[0m
+          [1m(gensym string)  ==>  symbol[0m
+              Return a fresh symbol. When a [4mstring[24m or [4msymbol[24m  argument
               is given, use it as prefix for the fresh symbol.
 
-          (load-from-library string)  ==>  unspecific
-              Attempt  to  load the file string from each directory of
-              S9FES_LIBRARY_PATH.
+          [1m(load-from-library string)  ==>  unspecific[0m
+              Attempt  to  [1mload [22mthe file [4mstring[24m from each directory of
+              [4mS9FES_LIBRARY_PATH[24m.
 
-          (locate-file string)  ==>  string | #f
-              Search  for  the  file  string  in  each   directory  of
-              S9FES_LIBRARY_PATH  in  sequence.   When the file can be
-              located, return its full path, else return #f.
+          [1m(locate-file string)  ==>  string | #f[0m
+              Search  for  the  file  [4mstring[24m  in  each   directory  of
+              [4mS9FES_LIBRARY_PATH[24m  in  sequence.   When the file can be
+              located, return its full path, else return [1m#f[22m.
 
-          (macro-expand object)  ==>  object
-          (macro-expand-1 object)  ==>  object
-              If object is a  list  resembling  a  macro  application,
+          [1m(macro-expand object)  ==>  object[0m
+          [1m(macro-expand-1 object)  ==>  object[0m
+              If [4mobject[24m is a  list  resembling  a  macro  application,
               return  the  expanded  form,  else  return  the  object.
-              Macro-expand-1 expands macros  only  once  while  macro-
-              expand expands them recursively.
+              [1mMacro-expand-1 [22mexpands macros  only  once  while  [1mmacro-[0m
+              [1mexpand [22mexpands them recursively.
 
-          (mantissa real)  ==>  integer
+          [1m(mantissa real)  ==>  integer[0m
               Extract the mantissa part from a real number.
 
-          (print object ...)  ==>  unspecific
-              Write multiple objects separated by spaces.
+          [1m(print object ...)  ==>  unspecific[0m
+              Write multiple [4mobject[24ms separated by spaces.
 
-          (require-extension name ...)  ==>  unspecific
+          [1m(require-extension name ...)  ==>  unspecific[0m
               Require  the  named extensions to be compiled-in. Signal
               an error if not  all  of  the  required  extensions  are
               present.
 
-          (reverse! list)  ==>  list
-              Reverse  list destructively and return the reverse list.
+          [1m(reverse! list)  ==>  list[0m
+              Reverse [4mlist[24m destructively and return the reverse list.
 
-          (set-input-port! input-port)  ==>  unspecific
+          [1m(set-input-port! input-port)  ==>  unspecific[0m
               Destructively set the current input port.
 
-          (set-output-port! output-port)  ==>  unspecific
+          [1m(set-output-port! output-port)  ==>  unspecific[0m
               Destructively set the current output port.
 
 
@@ -201,9 +201,9 @@ S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
 
-          (stats form)  ==>  form
-              Evaluate the given form and return a list containing its
-              normal  form  plus  a  summary  of the resources used to
+          [1m(stats form)  ==>  form[0m
+              Evaluate the given [4mform[24m and return a list containing its
+              normal form plus a summary  of  the  resources  used  to
               compute that normal form:
 
                   - reduction steps
@@ -211,50 +211,50 @@ S9(1)                  Scheme 9 from Empty Space                 S9(1)
                   - total nodes allocated
                   - garbage collections
 
-              Each resource count will  be  returned  as  a  group  of
-              integers  representing  ones,  thousands, millions, etc.
-              Note that form must be quoted or it  will  be  evaluated
-              before passing it to stats.
+              Each  resource  count  will  be  returned  as a group of
+              integers representing ones,  thousands,  millions,  etc.
+              Note  that  [4mform[24m  must be quoted or it will be evaluated
+              before passing it to [1mstats[22m.
 
-          (symbols)  ==>  list
+          [1m(symbols)  ==>  list[0m
               Return a list of all defined symbols.
 
-          (system string)  ==>  number
+          [1m(system string)  ==>  number[0m
               Run the given shell command and return its exit code.
 
-          (trace symbol ...)  ==>  list | #t
-          (trace #t)          ==>  list | #t
-              Trace  the procedure or syntax object bound to the given
-              symbols.   When  #t  is  passed  to  trace,  trace   all
-              procedures  and syntax objects (expect lots of output!).
-              When no arguments are passed  to  it,  disable  tracing.
-              Trace  returns the symbols that were being traced before
+          [1m(trace symbol ...)  ==>  list | #t[0m
+          [1m(trace #t)          ==>  list | #t[0m
+              Trace the procedure or syntax object bound to the  given
+              [4msymbol[24ms.    When  [1m#t  [22mis  passed  to  [1mtrace[22m,  trace  [4mall[0m
+              procedures and syntax objects ([4mexpect[24m [4mlots[24m [4mof[24m  [4moutput![24m).
+              When  no  arguments  are  passed to it, disable tracing.
+              [1mTrace [22mreturns the symbols that were being traced  before
               its invocation.
 
-          (vector-append vector ...)  ==>  vector
-              Return a fresh vector containing  the  concatenation  of
+          [1m(vector-append vector ...)  ==>  vector[0m
+              Return  a  fresh  vector containing the concatenation of
               the given vectors.
 
-          (vector-copy vector)                           ==>  vector
-          (vector-copy vector integer)                   ==>  vector
-          (vector-copy vector integer1 integer2)         ==>  vector
-          (vector-copy vector integer1 integer2 object)  ==>  vector
-              Return  a  copy  of  the  given vector. When integer1 is
-              specified, skip  the  given  number  of  elements.  When
-              integer2  is also specified, copy elements from integer1
-              up to,  but  not  including,  integer2.   When  integer2
-              exceeds  the size of the original vector, add unspecific
-              slots to the copy. When an  object  argument  is  given,
+          [1m(vector-copy vector)                           ==>  vector[0m
+          [1m(vector-copy vector integer)                   ==>  vector[0m
+          [1m(vector-copy vector integer1 integer2)         ==>  vector[0m
+          [1m(vector-copy vector integer1 integer2 object)  ==>  vector[0m
+              Return a copy of the  given  vector.  When  [4minteger1[24m  is
+              specified,  skip  the  given  number  of  elements. When
+              [4minteger2[24m is also specified, copy elements from  [4minteger1[0m
+              up  to,  but  not  including,  [4minteger2[24m.   When [4minteger2[0m
+              exceeds the size of the original vector, add  unspecific
+              slots  to  the  copy.  When an [4mobject[24m argument is given,
               fill extra slots with that argument.
 
-          (void)  ==>  unspecific
+          [1m(void)  ==>  unspecific[0m
               Return an unspecific value.
 
-          Refer  to  the  help  pages for descriptions of the Scheme 9
+          Refer to the help pages for descriptions  of  the  Scheme  9
           extension procedures.
 
-SPECIAL VARIABLES
-          These variables are  predefined  in  the  dynamic  top-level
+[1mSPECIAL VARIABLES[0m
+          These  variables  are  predefined  in  the dynamic top-level
           scope of the interpreter.
 
 
@@ -266,23 +266,23 @@ S9 Interpreter                  Page 4                           S9(1)
 S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
-          ** (form)
-              The   normal   form  of  the  expression  most  recently
+          [1m** (form)[0m
+              The  normal  form  of  the  expression   most   recently
               evaluated at the top level.
-          *extensions* (list of symbols)
+          [1m*extensions* (list of symbols)[0m
               Compiled-in extensions.
-          *library-path* (string)
-              A verbatim copy of  the  S9FES_LIBRARY_PATH  environment
+          [1m*library-path* (string)[0m
+              A  verbatim  copy  of the [4mS9FES_LIBRARY_PATH[24m environment
               variable (see below).
-          *loading* (boolean)
-              Set to #t when loading a file, else #f.
+          [1m*loading* (boolean)[0m
+              Set to [1m#t [22mwhen [1mload[22ming a file, else [1m#f[22m.
 
-MACROS
-          A  macro  is  a procedure that is applied to its unevaluated
+[1mMACROS[0m
+          A macro is a procedure that is applied  to  its  unevaluated
           arguments.  The macro application is replaced with the value
-          returned   by   the  procedure.   This  happens  before  the
+          returned  by  the  procedure.   This  happens   before   the
           expression containing the macro application is evaluated, so
-          a macro rewrites its own application:
+          a macro [4mrewrites[24m its own application:
 
           (define-syntax (when p . c)
             `(if ,p (begin ,@c)))
@@ -293,37 +293,37 @@ MACROS
                             #t))
           (when (= 1 1) 1 2 3)  ==>  3
 
-          The define-syntax form introduces a new macro:
+          The [1mdefine-syntax [22mform introduces a new macro:
 
-          (define-syntax name procedure)        ==>  unspecific
-          (define-syntax (name args ...) body)  ==>  unspecific
+          [1m(define-syntax name procedure)        ==>  unspecific[0m
+          [1m(define-syntax (name args ...) body)  ==>  unspecific[0m
 
-          Both  of  these forms introduce the keyword name and bind it
-          to a procedure. The first form requires the second  argument
-          to  be  a procedure. Like in define forms the second variant
+          Both of these forms introduce the keyword [4mname[24m and  bind  it
+          to  a procedure. The first form requires the second argument
+          to be a procedure. Like in [1mdefine [22mforms the  second  variant
           implies a procedure definition.
 
-          Macros may contain applications of macros that were  defined
-          earlier.   Macros  may  not  recurse  directly, but they may
-          implement recursion internally using letrec or by  rewriting
-          their  own  applications.  The following macro, for example,
-          does not work, because d is undefined in the body of d:
+          Macros  may contain applications of macros that were defined
+          earlier.  Macros may not  recurse  directly,  but  they  may
+          implement  recursion internally using [1mletrec [22mor by rewriting
+          their own applications. The following  macro,  for  example,
+          does [4mnot[24m work, because [4md[24m is undefined in the body of [4md[24m:
 
-          (define-syntax (d x) (and (pair? x) (d (cdr x)))) ; wrong
+          [1m(define-syntax (d x) (and (pair? x) (d (cdr x)))) ; wrong[0m
 
-          The following version does work, though:
+          The following version [4mdoes[24m work, though:
 
-          (define-syntax (d x) (and (pair? x) `(d ,(cdr x)))) ; OK
+          [1m(define-syntax (d x) (and (pair? x) `(d ,(cdr x)))) ; OK[0m
 
-          The body of define-syntax may be a syntax-rules transformer,
-          as described in R4RS, if the syntax-rules extension has been
+          The body of [1mdefine-syntax [22mmay be a [1msyntax-rules [22mtransformer,
+          as described in R4RS, if the [1msyntax-rules [22mextension has been
           loaded.
 
-TECHNICAL DETAILS
-          S9fES is a tree-walking interpreter using deep  binding  and
-          hashed  environments.  It  employs  an extremely reliable[1]
+[1mTECHNICAL DETAILS[0m
+          S9fES  is  a tree-walking interpreter using deep binding and
+          hashed environments. It  employs  an  extremely  reliable[1]
           constant-space mark and sweep garbage collector with in-situ
-          string  and  vector  pool  compaction.  Memory pools grow on
+          string and vector pool  compaction.  Memory  pools  grow  on
 
 
 S9 Interpreter                  Page 5                           S9(1)
@@ -332,64 +332,64 @@ S9 Interpreter                  Page 5                           S9(1)
 S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
-          demand. The  interpreter  uses  arbitrary-precision  integer
-          arithmetics   and   (optional)   decimal-based  real  number
+          demand.  The  interpreter  uses  arbitrary-precision integer
+          arithmetics  and  (optional)   decimal-based   real   number
           arithmetics.
 
-INTERPRETER START-UP
-          When the s9 interpreter is started, the following steps will
+[1mINTERPRETER START-UP[0m
+          When the [1ms9 [22minterpreter is started, the following steps will
           be performed in this order:
 
           Load library.
               The interpreter searches its library path (either built-
-              in or specified in  the  S9FES_LIBRARY_PATH  environment
-              variable)  for  a  heap image file or the library source
+              in  or  specified  in the [4mS9FES_LIBRARY_PATH[24m environment
+              variable) for a heap image file or  the  library  source
               code. The heap image file is the name of the interpreter
-              with  a  .image suffix appended. An alternative name can
-              be specified with the  -i  option  (see  OPTIONS).   The
-              default  library source code is named s9.scm.  The first
-              directory containing either a heap image or the  library
+              with a [4m.image[24m suffix appended. An alternative  name  can
+              be  specified  with  the  [1m-i  [22moption (see [1mOPTIONS[22m).  The
+              default library source code is named [4ms9.scm[24m.  The  first
+              directory  containing either a heap image or the library
               source code is used. When the directory contains both an
               image and the library sources, the image is loaded.
 
           Initialize extensions.
-              Any  extensions  compiled  into  the   interpreter   are
-              initialized  by  calling  the  nullary procedure ext:ext
-              (where ext is the name of the extension). The procedures
+              Any   extensions   compiled  into  the  interpreter  are
+              initialized by calling  the  nullary  procedure  [1mext:ext[0m
+              (where [1mext [22mis the name of the extension). The procedures
               are optional. The first `extension' being initialized is
-              S9 itself, so when a procedure named  s9:s9  exists,  it
+              [1mS9  [22mitself,  so  when a procedure named [1ms9:s9 [22mexists, it
               will be called at this point.
 
           Evaluate command line options.
-              When a -l file option is found, the program contained in
-              the given file will be loaded.   When  a  -f  file  args
-              option  is found, the program contained in the file will
-              be run and then S9 will exit.  Args will  be  passed  to
+              When a [4m-l[24m [4mfile[24m option is found, the program contained in
+              the  given  file  will  be  [1mload[22med.  When a [4m-f[24m [4mfile[24m [4margs[0m
+              option is found, the program contained in the file  will
+              be  run  and  then S9 will exit.  [4mArgs[24m will be passed to
               the program.
 
           Load rc file.
-              If  an  `rc  file'  ($HOME/.s9fes/rc) exists, it will be
-              loaded at this point as if its name was  passed  to  the
-              load procedure. (Unless the -n option was specified.)
+              If an `rc file' ([4m$HOME/.s9fes/rc[24m)  exists,  it  will  be
+              loaded  at  this  point as if its name was passed to the
+              [1mload [22mprocedure. (Unless the [4m-n[24m option was specified.)
 
           Enter REPL.
-              Interactive  mode is only entered, when no -f option was
+              Interactive mode is only entered, when no [4m-f[24m option  was
               specified.
 
-ALLOCATION STRATEGY
-          The S9fES memory pool grows exponentially until  the  memory
-          limit  its  reached.  When the limit is reached, the current
-          computation is aborted. A  memory  limit  can  be  specified
-          using  the -m command line option. The limit is specified in
-          units of 1024 nodes (or  in  units  of  1024*1024  nodes  by
-          appending an m suffix).
-          Note that computations may abort before the limit is reached
-          due to the way the pool  grows.  Use  the  -g  command  line
+[1mALLOCATION STRATEGY[0m
+          The  S9fES  memory pool grows exponentially until the memory
+          limit is reached. When the limit  is  reached,  the  current
+          computation  is  aborted.  A  memory  limit can be specified
+          using the [1m-m [22mcommand line option. The limit is specified  in
+          units  of  1024  nodes  (or  in  units of 1024*1024 nodes by
+          appending an [1mm [22msuffix).
+
+          Note that computations may abort [4mbefore[24m the limit is reached
+          due  to  the  way  the  pool  grows. Use the [1m-g [22mcommand line
           option to experiment with pool sizes.
+
           Specifying  a  limit  of  zero  disables  the  memory  limit
-          completely and the interpreter will allocate as much  memory
-
-
+          completely  and the interpreter will allocate as much memory
 
 
 S9 Interpreter                  Page 6                           S9(1)
@@ -400,61 +400,61 @@ S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
           as it can get.  This option should be used with care.
 
-LIMITATIONS
+[1mLIMITATIONS[0m
           These parts of R4RS are not implemented:
 
-          I/O: char-ready?  (this is in the sys-unix extension).
-          Transcripts: transcript-off, transcript-on.
-          Rational and complex numbers and related procedures.
+          I/O: [1mchar-ready?  [22m(this is in the [1msys-unix [22mextension)
+          Transcripts: [1mtranscript-off[22m, [1mtranscript-on[0m
+          Rational and complex numbers and related procedures
 
-BUGS
-          You  may  not quasiquote quasiquote unless in unquote (e.g.:
-          ``x does not work, but `,`x does).
-          Syntax-rules is not fully hygienic.
-          Multiple call/cc's in the arguments of the same  lambda  (or
-          derived   binding  syntax,  such  as  let)  will  break  the
+[1mBUGS[0m
+          You may not quasiquote [1mquasiquote [22munless in  [1munquote  [22m(e.g.:
+          [1m``x [22mdoes not work, but [1m`,`x [22mdoes).
+          [1mSyntax-rules [22mis not fully hygienic.
+          Multiple  [1mcall/cc[22m's  in the arguments of the same [1mlambda [22m(or
+          derived  binding  syntax,  such  as  [1mlet[22m)  will  break   the
           evaluator.
 
-FILES
-          $HOME/.s9fes/rc
-              If present, this file is  loaded  when  the  interpreter
+[1mFILES[0m
+          [1m$HOME/.s9fes/rc[0m
+              If  present,  this  file  is [1mload[22med when the interpreter
               starts in interactive mode.
-          @LIBDIR@
+          [1m@LIBDIR@[0m
               The S9fES procedure library (source code).
-          @LIBDIR@/contrib
+          [1m@LIBDIR@/contrib[0m
               Contributions to the procedure library (source code).
-          @LIBDIR@/s9.image
+          [1m@LIBDIR@/s9.image[0m
               The interpreter heap image.
-          *.scm
+          [1m*.scm[0m
               Scheme source code.
 
-ENVIRONMENT
-          S9FES_LIBRARY_PATH
-              A  colon-separated  list  of  directories  which will be
-              searched for the s9  library  when  the  interpreter  is
-              launched.  The  same directories will be searched by the
-              locate-file procedure.
-              Default: .:~/.s9fes:@LIBDIR@
+[1mENVIRONMENT[0m
+          [1mS9FES_LIBRARY_PATH[0m
+              A colon-separated list  of  directories  which  will  be
+              searched  for  the  s9  library  when the interpreter is
+              launched. The same directories will be searched  by  the
+              [1mlocate-file [22mprocedure.
+              Default: [4m.:~/.s9fes:@LIBDIR@[0m
 
-SIGNALS
-          These work only if POSIX  signal  handling  was  enabled  at
+[1mSIGNALS[0m
+          These  work  only  if  POSIX  signal handling was enabled at
           compile time.
 
-          SIGINT
+          [1mSIGINT[0m
               Abort input or terminate program execution.
-          SIGQUIT
+          [1mSIGQUIT[0m
               Terminate the interpreter process (emergency exit).
-          SIGTERM
+          [1mSIGTERM[0m
               Silently terminate the interpreter process.
 
-FOOTNOTES
-          [1] See comp.lang.scheme Usenet message
-              <vhtzl9lupyp.fsf@maharal.csail.mit.edu>
+[1mFOOTNOTES[0m
+          [1m[1] [22mSee [4mcomp.lang.scheme[24m Usenet message
+              [4m<vhtzl9lupyp.fsf@maharal.csail.mit.edu>[0m
               (Thu, 27 Aug 2009 13:27:42 -0400) and its follow-ups.
 
-REFERENCES
+[1mREFERENCES[0m
           The Revised^4 Report on the Algorithmic Language Scheme.
-              http://www-swiss.ai.mit.edu/~jaffer/r4rs_toc.html
+              [1mhttp://www-swiss.ai.mit.edu/~jaffer/r4rs_toc.html[0m
 
 
 
@@ -464,11 +464,11 @@ S9 Interpreter                  Page 7                           S9(1)
 S9(1)                  Scheme 9 from Empty Space                 S9(1)
 
 
-          Scheme  9 from Empty Space -- A Guide to Implementing Scheme
+          Scheme 9 from Empty Space -- A Guide to Implementing  Scheme
           in C.
-              Available at Lulu.com, see http://www.t3x.org
+              [1mAvailable at Lulu.com, see http://www.t3x.org[0m
 
-AUTHOR
+[1mAUTHOR[0m
           Nils M Holm
 
 
