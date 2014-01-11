@@ -244,7 +244,7 @@ update-library:
 
 s9.1.txt:	s9.1
 	cc -o rpp util/rpp.c
-	nroff s9.1 | ./rpp -a >s9.1.txt
+	nroff -mdoc s9.1 | ./rpp -a >s9.1.txt
 	rm -f rpp
 
 docs:	lib ext contrib
